@@ -18,11 +18,11 @@ Route generateRoute(settings) {
         builder: (context) => MyWidget(car: settings.arguments as Car));
   }
   if (settings.name == MyWidget1.routName) {
-    return MaterialPageRoute(
+    return MaterialPageRoute(settings: settings,
       builder: (context) => MyWidget1());
   }
    if (settings.name == ComplatedPage.routName) {
-    return MaterialPageRoute(builder: (context) => ComplatedPage());
+    return MaterialPageRoute(settings: settings, builder: (context) => ComplatedPage());
   }
-  return MaterialPageRoute(builder: (context) => BlackScerens());
+  return MaterialPageRoute(settings: settings, builder: (context) => BlackScerens());
 }
