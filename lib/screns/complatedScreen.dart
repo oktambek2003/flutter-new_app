@@ -21,7 +21,7 @@ class ComplatedPage extends StatelessWidget {
             ),
           ),
           ElevatedButton(onPressed: () {
-            Navigator.pushReplacementNamed(context, "/");
+            Navigator.popUntil(context, (route) => route.settings.name=="/");
           },
           child: Text("Home"),
           )

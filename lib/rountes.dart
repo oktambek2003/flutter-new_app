@@ -8,14 +8,18 @@ import './screns/secondScreen.dart';
 import './screns/complatedScreen.dart';
 Route generateRoute(settings) {
   if (settings.name == HomeScreen.rounName) {
-    return MaterialPageRoute(builder: (context) => HomeScreen());
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (context) => HomeScreen());
   }
   if (settings.name == MyWidget.routName) {
     return MaterialPageRoute(
+      settings: settings,
         builder: (context) => MyWidget(car: settings.arguments as Car));
   }
   if (settings.name == MyWidget1.routName) {
-    return MaterialPageRoute(builder: (context) => MyWidget1());
+    return MaterialPageRoute(
+      builder: (context) => MyWidget1());
   }
    if (settings.name == ComplatedPage.routName) {
     return MaterialPageRoute(builder: (context) => ComplatedPage());
